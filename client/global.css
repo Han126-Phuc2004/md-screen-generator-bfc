@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 24 90% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 23 100% 96%;
+    --accent-foreground: 24 90% 38%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 24 90% 54%;
+    --radius: 0.625rem;
+  }
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif; }
+  button, input, select { font: inherit; }
+}
+
+@layer components {
+  .f-card { @apply rounded-2xl border bg-white shadow-[0_4px_12px_rgba(15,23,42,0.06)]; }
+  .f-btn { @apply inline-flex h-11 items-center justify-center gap-2 rounded-[10px] px-5 text-sm font-semibold transition-colors; }
+  .f-btn-primary { @apply f-btn bg-[#F37021] text-white hover:bg-[#a04100]; }
+  .f-btn-secondary { @apply f-btn border bg-white text-[#0F172A] hover:bg-slate-50; }
+  .f-label { @apply mb-2 block text-sm font-semibold text-slate-700; }
+  .f-input { @apply h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm outline-none transition focus:border-[#F37021] focus:ring-2 focus:ring-orange-100; }
+  .badge { @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold; }
+}
